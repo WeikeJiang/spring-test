@@ -1,11 +1,13 @@
 package com.demo.springbootdemo.web;
 
-import org.springframework.stereotype.Controller;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 @RequestMapping("/api")
 public class HelloControler {
 
@@ -15,7 +17,11 @@ public class HelloControler {
     }
 	
 	@GetMapping("/books")
-	public String getAll() {
-		return "books";
+	public Object getAll() {
+		Map<String, Object> map = new HashMap<>();
+		map.put("name", "hello");
+		map.put("age", 18);
+
+		return map;
 	}
 }
