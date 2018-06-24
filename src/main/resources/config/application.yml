@@ -1,0 +1,8 @@
+server:
+ port: 8080
+
+
+book:
+ name: 互联网世界观
+ author: 李善友
+ isbn: 89432432
